@@ -78,7 +78,7 @@ app.post('/', validation, async(req, res) => {
             return res.status(400).json({
                 ok: false,
                 resp: 400,
-                msg: `Ya se encuentra una tarea con el nombre ${task.name}`,
+                msg: `Ya se encuentra una tarea con el nombre ${task.title}`,
                 cont: 0
             });
         }

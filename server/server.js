@@ -8,7 +8,14 @@ const mongoose = require('mongoose');
 const app = express();
 const morgan = require('morgan');
 const fs = require('fs');
-const logFile = fs.createWriteStream(__dirname + '/status.log', { flags: 'a' })
+
+let day = new Date().getDate();
+if(day < 10){ day = `0${day}`}
+let month = new Date().getMonth() + 1;
+if(month < 10){ month = `0${month}`}
+const year = new Date().getFullYear();
+let date = day + "-" + month + "-" + year;
+const logFile = fs.createWriteStream('../logs' + '/status.log_' + date, { flags: 'a' })
 // const opcionesGet = require('./middlewares/opcionesGet');
 
 app.use(cors());

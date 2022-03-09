@@ -12,6 +12,7 @@ const projectSchema = new Schema({
     },
     estatus: {
         type: String,
+        required: [true, 'Se requiere el estado'],
         default: 'En progreso'
     },
     dateStart: {

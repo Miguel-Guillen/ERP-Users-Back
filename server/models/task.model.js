@@ -16,11 +16,13 @@ const taskSchema = new Schema({
     },
     priority: {
         type: String,
-        default: 'Medio'
+        default: 'Medio',
+        required: [true, 'Se requiere la prioridad']
     },
     estatus: {
         type: String,
-        default: 'Por hacer'
+        default: 'Por hacer',
+        required: [true, 'Se requiere el estado de la tarea']
     },
     dueDate: {
         type: Date,
