@@ -10,6 +10,7 @@ let validation = [
     check('surnames').rtrim().escape(),
     check('job').rtrim().escape(),
     check('area').rtrim().escape(),
+    check('salary').rtrim().escape(),
     check('email').isEmail().normalizeEmail().trim(),
     check('password').isString().trim(),
     check('rol').trim().escape(),

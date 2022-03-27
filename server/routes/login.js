@@ -28,7 +28,7 @@ app.post('/', validation, async(req, res) => {
 
         const { email, password } = req.body
         const employeeFound = await employeeModel.findOne({ email });
-        if (!employeeFound){
+        if (!employeeFound || employeeFound.blnActivo === false){
             return res.status(400).json({
                 ok: false,
                 resp: 400,

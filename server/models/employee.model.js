@@ -18,6 +18,10 @@ const employeeSchema = new Schema({
         type: String,
         required: [true, 'Se requiere el area de trabajo']
     },
+    salary: {
+        type: Number,
+        required: [true, 'Se requiere el salario']
+    },
     email: {
         type: String,
         unique: true,
